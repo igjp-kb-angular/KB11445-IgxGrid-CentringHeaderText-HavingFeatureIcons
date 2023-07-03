@@ -1,0 +1,26 @@
+.grid__wrapper {
+    margin: 1em;
+}
+
+:host::ng-deep{
+    .centered {
+        text-align: center;
+    }
+
+    /*
+    すべての列でアイコンを右側に配置してよい場合のセレクターは.igx-grid-th__iconsのみで大丈夫です（".igx-grid-th >"部分は不要）。
+    */
+    .igx-grid-th > .igx-grid-th__icons {
+        position: absolute;
+        right: 12px;    /* アイコンの右側にどれくらい余白を入れるかは調整お願いいたします。 */
+    }
+
+    /*
+    数値列の場合、デフォルトで左側にアイコンが表示されます。
+    その位置をキープしたい場合はleftで配置を指定してください。
+    */
+    .igx-grid-th--number > .igx-grid-th__icons {
+        position: absolute;
+        left: 12px;    /* アイコンの左側にどれくらい余白を入れるかは調整お願いいたします。 */
+    }
+}
